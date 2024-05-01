@@ -7,36 +7,38 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body class="bg-stone-600">
+<body class="bg-stone-600 lg:px-[23rem]">
   <div class="flex flex-col gap-3 p-3 text-orange-200 justify-center items-center mb-[4.3rem]">
-    <article id="home" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87vh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="home" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
-      <h1>Save the day</h1>
-      <span class="nama font-[Sacramento] text-5xl">Alif & Yani</span>
-      <span>Akan menikah</span>
-      <div class="flex gap-3 items-center ">
+      <h1 data-aos="fade-up">Save the day</h1>
+      <span data-aos="fade-up" class="nama font-[Sacramento] text-5xl">Alif & Yani</span>
+      <span data-aos="fade-up">Akan menikah</span>
+      <div data-aos="fade-up" class="flex gap-3 items-center ">
         <span class="border-y border-orange-200">Mei</span>
         <span class="text-4xl font-bold">20</span>
         <span class="border-y border-orange-200">2024</span>
       </div>
     </article>
 
-    <article id="people" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87vh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="people" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
-      <h1>Mempelai</h1>
+      <h1 data-aos="fade-up">Mempelai</h1>
       <div class="flex items-center gap-2">
-        <div class="rounded-xl overflow-hidden shadow w-[80px] grayscale h-[80px]">
+        <div data-aos="zoom-in" class="rounded-xl overflow-hidden shadow w-[80px] grayscale h-[80px]">
           <img src="img/alif.jpg" alt="">
         </div>
-        <ion-icon name="heart" class="text-orange-600 text-2xl"></ion-icon>
-        <div class="rounded-xl overflow-hidden shadow w-[80px] grayscale h-[80px]">
+        <ion-icon name="heart" data-aos="zoom-in" class="text-orange-600 text-2xl"></ion-icon>
+        <div data-aos="zoom-in" class="rounded-xl overflow-hidden shadow w-[80px] grayscale h-[80px]">
           <img src="img/yani.jpg" alt="">
         </div>
       </div>
-      <div class="flex flex-col items-center gap-2">
+      <div data-aos="zoom-in" class="flex flex-col items-center gap-2">
         <span class="font-[Parisienne] text-3xl border-b border-dashed border-orange-200">Alif rahman</span>
         <span class="text-xs">Dari Pasangan :</span>
         <span class="text-xs">Bapak Wasiman & Ibu Riyanti</span>
@@ -47,7 +49,7 @@
     </article>
   </div>
 
-  <nav class="fixed bottom-0 left-0 right-0 p-3 bg-stone-600" >
+  <nav class="fixed bottom-0 left-0 right-0 p-3 lg:px-[23.9rem] bg-stone-600" >
     <div class="flex text-orange-200 bg-stone-800 p-3 rounded-full justify-evenly text-2xl">
       <a href="#home"><ion-icon name="home"></ion-icon></a>
       <a href="#people"><ion-icon name="people"></ion-icon></a>
@@ -56,5 +58,9 @@
       <a href=""><ion-icon name="map"></ion-icon></a>
     </div>
   </nav>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
