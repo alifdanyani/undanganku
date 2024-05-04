@@ -11,8 +11,18 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="bg-stone-600 lg:px-[23rem]">
+  <div id="cover" class="fixed bg-stone-900 z-50 w-full h-full flex justify-center items-center left-0 right-0">
+    <div data-aos="fade-down" class="flex items-center text-slate-200 justify-center flex-col gap-3">
+      <span class="text-xl font-bold text-yellow-400 shadow">Undangan</span>
+      <span class="font-[Parisienne] my-6 text-6xl">Alif & Yani</span>
+      <span class="text-sm">20 Mei 2024</span>
+      <span class="text-xs text-yellow-400">Kepada/Yth/Bapak/Ibu/Saudara/i</span>
+      <span class="font-semibold">Tamu undangan</span>
+      <button onclick="cover()" class="py-2 px-4 text-xs bg-yellow-300 text-slate-700 shadow rounded-full mt-2 font-bold">Buka undangan</button>
+    </div>
+  </div>
   <div class="flex flex-col gap-3 p-3 text-orange-200 justify-center items-center mb-[4.3rem]">
-    <article id="home" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="home" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87svh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
       <h1 data-aos="fade-up">Save the day</h1>
@@ -25,17 +35,17 @@
       </div>
     </article>
 
-    <article id="people" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="people" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87svh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
       <h1 data-aos="fade-up">Mempelai</h1>
       <div class="flex items-center gap-2">
         <div data-aos="zoom-in" class="rounded-xl overflow-hidden shadow w-[80px] grayscale h-[80px]">
-          <img src="img/alif.jpg" alt="">
+          <img src="img/alif.jpg" alt="" id="img">
         </div>
         <ion-icon name="heart" data-aos="zoom-in" class="text-orange-600 text-2xl"></ion-icon>
         <div data-aos="zoom-in" class="rounded-xl overflow-hidden shadow w-[80px] grayscale h-[80px]">
-          <img src="img/yani.jpg" alt="">
+          <img src="img/yani.jpg" alt="" id="img">
         </div>
       </div>
       <div data-aos="zoom-in" class="flex flex-col items-center gap-2">
@@ -46,34 +56,32 @@
         <span class="text-xs">Dari Pasangan :</span>
         <span class="text-xs">Bapak Burhanuddin & Ibu Sukesih</span>
       </div>
+      
+      <div id="modal" class="fixed hidden flex-col justify-center items-center w-full top-0 h-full bg-stone-700 z-50">
+        <img src="img/alif.jpg" alt="" class="rounded-lg mb-3 shadow">
+        <button><ion-icon class="p-5 text-4xl text-red-300 right-3 absolute" name="close-outline"></ion-icon></button>
+      </div>
     </article>
 
-    <article id="date" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="date" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87svh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
       <h1 data-aos="fade-up">Acara</h1>
       
       <div class="flex flex-col gap-2 justify-center items-center">
-        <span>Akad nikah</span>
+        <span>Akad nikah & Resepsi</span>
         <div data-aos="fade-up" class="flex gap-3 items-center ">
           <span class="border-y border-orange-200">Mei</span>
           <span class="text-4xl font-[Parisienne]">20</span>
           <span class="border-y border-orange-200">2024</span>
         </div>
         <span class="text-xs">10:00 WITA - Selesai</span>
-        <span class="py-5 "></span>
-        <span>Resepsi</span>
-        <div data-aos="fade-up" class="flex gap-3 items-center ">
-          <span class="border-y border-orange-200">Mei</span>
-          <span class="text-4xl font-[Parisienne]">20</span>
-          <span class="border-y border-orange-200">2024</span>
-        </div>
-        <span class="text-xs">11:00 WITA - Selesai</span>
+
       </div>
 
     </article>
 
-    <article id="gift" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="gift" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87svh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
       <h1 data-aos="fade-up">Kado</h1>
@@ -109,7 +117,7 @@
         </div>
     </article>
     
-    <article id="map" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87dvh] w-full p-3 flex justify-center flex-col items-center">
+    <article id="map" class="rounded-xl relative overflow-hidden bg-stone-800 gap-7 h-[87svh] w-full p-3 flex justify-center flex-col items-center">
       <img src="img/sudut.png" class="absolute -top-2 opacity-[.4] -right-4 -rotate-90" alt="" width="180">
       <img src="img/sudut.png" class="absolute -bottom-2 opacity-[.4] -left-4 rotate-90" alt="" width="180">
       <h1 data-aos="fade-up">Map</h1>
@@ -133,5 +141,7 @@
   <script>
     AOS.init();
   </script>
+  
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

@@ -7,3 +7,22 @@
 .nama{
   text-shadow: 2px 2px 2px #dddddd84;
 }
+
+article{
+  height: 89svh !important;
+}
+
+.xx{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover{
+  transform: translateY(-99rem);
+  opacity: 0;
+  transition: .3s;
+}
